@@ -56,7 +56,7 @@ namespace AppEsqueci.Services
             return lista;
         }
 
-        public void Atualizar(ModelNotas nota)
+        public void Alterar(ModelNotas nota)
         {
             try
             {
@@ -87,6 +87,39 @@ namespace AppEsqueci.Services
             {
                 throw new Exception(string.Format("Erro: {0}", ex.Message));
             }
+        }
+
+        public List<ModelNotas> Localizar(string titulo)
+        {
+            List<ModelNotas> lista = new List<ModelNotas>();
+            try
+            {
+                var resp = from p in conn.Table<ModelNotas>() 
+                           where p.Titulo.ToLower().Contains(titulo.ToLower()) 
+                           select p;
+
+                lista = resp.ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(string.Format("Erro: {0}", ex.Message));
+            }
+            return lista;
+        }
+
+        public ModelNotas GetNota(int id)
+        {
+            ModelNotas m = new ModelNotas();
+            try
+            {
+                m = conn.Table<ModelNotas>().First(n => n.Id == id);
+                StatusMessage = "Encontrou a nota!";
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(string.Format("Erro {0}", ex.Message));
+            }
+            return m;
         }
     }
 }
