@@ -40,7 +40,7 @@ namespace AppEsqueci.Services
             }
         }
 
-        public List<ModelNotas> ListarNotas()
+        public List<ModelNotas> Listar()
         {
             List<ModelNotas> lista = new List<ModelNotas>();
             try

@@ -17,6 +17,7 @@ namespace AppEsqueci.Views
         public PageListar()
         {
             InitializeComponent();
+            AtualizaLista();
         }
 
         public object ModelNota { get; private set; }
@@ -33,9 +34,16 @@ namespace AppEsqueci.Views
             DisplayAlert("Resultado da operação: ", dbNotas.StatusMessage, "OK");
         }
 
+        public void AtualizaLista()
+        {
+            ServicesDBNotas dBNotas = new ServicesDBNotas(App.DbPath);
+            listview_pagelistar_listarnotas.ItemsSource = dBNotas.Listar();
+        }
+
         private void Button_Clicked(object sender, EventArgs e)
         {
             InserirItens();
+            AtualizaLista();
         }
     }
 }

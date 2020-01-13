@@ -8,8 +8,18 @@
              Title="Listar Notas">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Listar Notas!" FontAttributes="Bold" FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            <Button Text="Cadastrar" Clicked="Button_Clicked"/>
+            <ListView x:Name="listview_pagelistar_listarnotas" HasUnevenRows="True" SeparatorColor="Aqua" Margin="15">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="{Binding Id}"/>
+                                <Label Text="{Binding Titulo}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
