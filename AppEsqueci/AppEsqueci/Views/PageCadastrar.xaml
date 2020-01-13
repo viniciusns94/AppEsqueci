@@ -7,8 +7,17 @@
              x:Class="AppEsqueci.Views.PageCadastrar"
              Title="Cadastro e alteração de notas">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Casdatro Notas!" FontAttributes="Bold" FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+        <StackLayout Margin="8">
+            <Entry x:Name="entry_pagecadastrar_titulo" Keyboard="Plain" Placeholder="Título da nota"/>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Nota Favorita: "/>
+                <Switch x:Name="swFavorito" HorizontalOptions="Start"/>    
+            </StackLayout>            
+            <Editor x:Name="editor_pagecadastrar_dados" Keyboard="Plain" Placeholder="Dados da nota" VerticalOptions="FillAndExpand" Margin="12" BackgroundColor="Beige"/>
+            <StackLayout Orientation="Horizontal" Margin="12">
+                <Button x:Name="button_pagecadastrar_salvar" Text="Inserir" Clicked="Button_pagecadastrar_salvar_Clicked" HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="button_pagecadastrar_cancelar" Text="Cancelar" Clicked="Button_pagecadastrar_cancelar_Clicked" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
