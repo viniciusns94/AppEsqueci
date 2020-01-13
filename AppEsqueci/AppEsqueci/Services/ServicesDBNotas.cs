@@ -13,7 +13,7 @@ namespace AppEsqueci.Services
 
         public ServicesDBNotas(string dbPath)
         {
-            if (string.IsNullOrEmpty(dbPath)) 
+            if (string.IsNullOrEmpty(dbPath))
                 dbPath = App.DbPath;
             conn = new SQLiteConnection(dbPath); //Define o banco
             conn.CreateTable<ModelNotas>(); // cria a tabela notas
@@ -54,6 +54,39 @@ namespace AppEsqueci.Services
             }
 
             return lista;
+        }
+
+        public void Atualizar(ModelNotas nota)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(nota.Titulo))
+                    throw new Exception("Titulo da nota não informado!");
+                if (string.IsNullOrEmpty(nota.Dados))
+                    throw new Exception("Dados da nota não informado!");
+                if (nota.Id <= 0)
+                    throw new Exception("Id da nota não informado!");
+
+                var result = conn.Update(nota);
+                StatusMessage = string.Format("{0} Registro(s) alterado(s) com sucesso!", result);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(string.Format("Erro: {0}", ex.Message));
+            }
+        }
+
+        public void Excluir(int id)
+        {
+            try
+            {
+                var result = conn.Table<ModelNotas>().Delete(r => r.Id == id);
+                StatusMessage = string.Format("{0} Registro(s) deletado(s).", result);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(string.Format("Erro: {0}", ex.Message));
+            }
         }
     }
 }
