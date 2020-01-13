@@ -8,13 +8,13 @@
              Title="Cadastro e alteração de notas">
     <ContentPage.Content>
         <StackLayout Margin="8">
-            <Entry x:Name="entry_pagecadastrar_titulo" Keyboard="Plain" Placeholder="Título da nota"/>
+            <Entry x:Name="entry_pagecadastrar_titulo" Keyboard="Plain" Placeholder="Título da nota" FontSize="Medium"/>
             <StackLayout Orientation="Horizontal">
                 <Label Text="Nota Favorita: "/>
                 <Switch x:Name="swFavorito" HorizontalOptions="Start"/>    
             </StackLayout>            
             <Editor x:Name="editor_pagecadastrar_dados" Keyboard="Plain" Placeholder="Dados da nota" VerticalOptions="FillAndExpand" Margin="12" BackgroundColor="Beige"/>
-            <StackLayout Orientation="Horizontal" Margin="12">
+            <StackLayout Orientation="Horizontal" Margin="12, 0, 12, 12">
                 <Button x:Name="button_pagecadastrar_salvar" Text="Inserir" Clicked="Button_pagecadastrar_salvar_Clicked" HorizontalOptions="FillAndExpand"/>
                 <Button x:Name="button_pagecadastrar_cancelar" Text="Cancelar" Clicked="Button_pagecadastrar_cancelar_Clicked" HorizontalOptions="FillAndExpand"/>
             </StackLayout>

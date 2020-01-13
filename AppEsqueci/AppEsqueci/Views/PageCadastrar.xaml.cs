@@ -39,6 +39,8 @@ namespace AppEsqueci.Views
                 {
 
                 }
+                MasterDetailPage p = (MasterDetailPage)Application.Current.MainPage;
+                p.Detail = new PageHome();
             }
             catch (Exception ex)
             {
@@ -48,7 +50,8 @@ namespace AppEsqueci.Views
 
         private void Button_pagecadastrar_cancelar_Clicked(object sender, EventArgs e)
         {
-
+            MasterDetailPage p = (MasterDetailPage)Application.Current.MainPage;
+            p.Detail = new PageHome();
         }
     }
 }
