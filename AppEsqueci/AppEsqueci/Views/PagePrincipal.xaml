@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="AppEsqueci.Views.PagePrincipal">
+             x:Class="AppEsqueci.Views.PagePrincipal" IsPresented="True">
     <MasterDetailPage.Master>
         <ContentPage Title="Menu">
             <Button Text="Home"/>
@@ -13,7 +13,7 @@
 
     <MasterDetailPage.Detail>
         <ContentPage Title="Page Principal">
-            <Label Text="Hello World!!!"/>
+            <Label x:Name="testeDB" Text="Hello World!!!"/>
         </ContentPage>
     </MasterDetailPage.Detail>
 </MasterDetailPage>

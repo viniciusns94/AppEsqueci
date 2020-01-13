@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace AppEsqueci.Droid
 {
-    class FileAcessHelper
+    public class FileAcessHelper
     {
         public static string GeLocalFilePath(string filename)
         {

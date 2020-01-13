@@ -15,6 +15,7 @@ namespace AppEsqueci.Views
         public PagePrincipal()
         {
             InitializeComponent();
+            testeDB.Text = App.DbPath;
         }
     }
 }

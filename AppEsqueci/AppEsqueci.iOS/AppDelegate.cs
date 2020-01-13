@@ -23,7 +23,10 @@ namespace AppEsqueci.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
+            //LoadApplication(new App());
+            string dbName = "dbEsqueci.db3";
+            string dbPath = FileAcessHelper.GeLocalFilePath(dbName);
+            LoadApplication(new App(dbPath, dbName));
 
             return base.FinishedLaunching(app, options);
         }
