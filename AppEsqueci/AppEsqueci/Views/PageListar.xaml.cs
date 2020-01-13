@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AppEsqueci.Models;
+using AppEsqueci.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +17,25 @@ namespace AppEsqueci.Views
         public PageListar()
         {
             InitializeComponent();
+        }
+
+        public object ModelNota { get; private set; }
+
+        public void InserirItens()
+        {
+            ModelNotas nota = new ModelNotas();
+            nota.Titulo = "Teste " + DateTime.Now.ToString();
+            nota.Dados = "Testando dados";
+            nota.Favorito= false;
+
+            ServicesDBNotas dbNotas = new ServicesDBNotas(App.DbPath);
+            dbNotas.Inserir(nota);
+            DisplayAlert("Resultado da operação: ", dbNotas.StatusMessage, "OK");
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            InserirItens();
         }
     }
 }

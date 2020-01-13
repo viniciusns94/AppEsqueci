@@ -7,8 +7,8 @@ namespace AppEsqueci
 {
     public partial class App : Application
     {
-        public static string DbName;
-        public static string DbPath;
+        public static String DbName;
+        public static String DbPath;
 
         public App()
         {

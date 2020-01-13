@@ -17,7 +17,8 @@ namespace AppEsqueci.Droid
         public static string GeLocalFilePath(string filename)
         {
             string Path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-            return System.IO.Path.Combine(Path, filename);
+            var connection = System.IO.Path.Combine(Path, filename);
+            return connection;
         }
     }
 }

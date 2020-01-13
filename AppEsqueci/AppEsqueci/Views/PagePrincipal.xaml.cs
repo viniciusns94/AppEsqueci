@@ -16,6 +16,7 @@ namespace AppEsqueci.Views
         {
             InitializeComponent();
             Button_pageprincipal_home_Clicked(new Object(), new EventArgs());
+            testeDB.Text ="Dir: "+ App.DbPath + " Name: " + App.DbName;
         }
 
         private void FecharGaveta()

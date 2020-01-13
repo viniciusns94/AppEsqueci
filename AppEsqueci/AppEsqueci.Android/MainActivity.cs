@@ -24,9 +24,7 @@ namespace AppEsqueci.Droid
 
             string dbName = "dbEsqueci.db3";
             string dbPath = FileAcessHelper.GeLocalFilePath(dbName);
-
             LoadApplication(new App(dbPath, dbName));
-            //LoadApplication(new App());
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {

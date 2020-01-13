@@ -9,6 +9,7 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Welcome to Listar Notas!" FontAttributes="Bold" FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            <Button Text="Cadastrar" Clicked="Button_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
