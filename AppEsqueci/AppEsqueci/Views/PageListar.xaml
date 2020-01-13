@@ -13,8 +13,8 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout>
-                                <Label Text="{Binding Id}"/>
-                                <Label Text="{Binding Titulo}"/>
+                                <Label Text="{Binding Id, StringFormat='Código: {0}'}"/>
+                                <Label Text="{Binding Titulo , StringFormat='Título: {0}'}"/>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
