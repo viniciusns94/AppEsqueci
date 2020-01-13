@@ -21,29 +21,18 @@ namespace AppEsqueci.Views
         }
 
         public object ModelNota { get; private set; }
-
-        public void InserirItens()
-        {
-            ModelNotas nota = new ModelNotas();
-            nota.Titulo = "Teste " + DateTime.Now.ToString();
-            nota.Dados = "Testando dados";
-            nota.Favorito= false;
-
-            ServicesDBNotas dbNotas = new ServicesDBNotas(App.DbPath);
-            dbNotas.Inserir(nota);
-            DisplayAlert("Resultado da operação: ", dbNotas.StatusMessage, "OK");
-        }
-
+                
         public void AtualizaLista()
         {
             ServicesDBNotas dBNotas = new ServicesDBNotas(App.DbPath);
             listview_pagelistar_listarnotas.ItemsSource = dBNotas.Listar();
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private void Listview_pagelistar_listarnotas_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            InserirItens();
-            AtualizaLista();
+            ModelNotas nota = (ModelNotas) listview_pagelistar_listarnotas.SelectedItem;
+            MasterDetailPage p = (MasterDetailPage)Application.Current.MainPage;
+            p.Detail = new PageCadastrar(nota);
         }
     }
 }
