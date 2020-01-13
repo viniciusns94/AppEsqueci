@@ -8,10 +8,32 @@
     <MasterDetailPage.Master>
         <ContentPage Title="Menu">
             <StackLayout>
-                <Button x:Name="button_pageprincipal_home" Text="Home" Clicked="Button_pageprincipal_home_Clicked"/>
-                <Button x:Name="button_pageprincipal_cadastrar" Text="Cadastrar" Clicked="Button_pageprincipal_cadastrar_Clicked"/>
-                <Button x:Name="button_pageprincipal_listar" Text="Listar" Clicked="Button_pageprincipal_listar_Clicked"/>
-                <Button x:Name="button_pageprincipal_sobre" Text="Sobre" Clicked="Button_pageprincipal_sobre_Clicked"/>
+                <Image Source="esqueci2.png" HorizontalOptions="Center"/>
+                <Label Text="Esqueci" FontSize="Large" TextColor="Black" HorizontalOptions="Center" Margin="0,0,0,50"/>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="info2.png"/>
+                    <Button x:Name="button_pageprincipal_home" Text="Home" Clicked="Button_pageprincipal_home_Clicked"
+                            HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="inserir.png"/>
+                    <Button x:Name="button_pageprincipal_cadastrar" Text="Cadastrar" Clicked="Button_pageprincipal_cadastrar_Clicked"
+                            HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="localizar.png"/>
+                    <Button x:Name="button_pageprincipal_listar" Text="Listar" Clicked="Button_pageprincipal_listar_Clicked"
+                            HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="info.png"/>
+                    <Button x:Name="button_pageprincipal_sobre" Text="Sobre" Clicked="Button_pageprincipal_sobre_Clicked"
+                            HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>

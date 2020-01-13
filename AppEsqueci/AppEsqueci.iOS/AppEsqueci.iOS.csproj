@@ -141,4 +141,28 @@
       <Name>AppEsqueci</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\deletar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\esqueci1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\esqueci2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\info2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\inserir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\localizar.png" />
+  </ItemGroup>
 </Project>

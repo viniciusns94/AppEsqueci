@@ -26,25 +26,25 @@ namespace AppEsqueci.Views
 
         private void Button_pageprincipal_home_Clicked(object sender, EventArgs e)
         {
-            Detail = new PageHome();
+            Detail = new NavigationPage(new PageHome());
             FecharGaveta();
         }
 
         private void Button_pageprincipal_cadastrar_Clicked(object sender, EventArgs e)
         {
-            Detail = new PageCadastrar();
+            Detail = new NavigationPage(new PageCadastrar());
             FecharGaveta();
         }
 
         private void Button_pageprincipal_listar_Clicked(object sender, EventArgs e)
         {
-            Detail = new PageListar();
+            Detail = new NavigationPage(new PageListar());
             FecharGaveta();
         }
 
         private void Button_pageprincipal_sobre_Clicked(object sender, EventArgs e)
         {
-            Detail = new PageSobre();
+            Detail = new NavigationPage(new PageSobre());
             FecharGaveta();
         }
     }
