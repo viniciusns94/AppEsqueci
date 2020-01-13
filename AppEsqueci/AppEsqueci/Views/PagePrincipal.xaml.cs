@@ -16,7 +16,6 @@ namespace AppEsqueci.Views
         {
             InitializeComponent();
             Button_pageprincipal_home_Clicked(new Object(), new EventArgs());
-            
         }
 
         private void FecharGaveta()

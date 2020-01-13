@@ -16,5 +16,13 @@ namespace AppEsqueci.Models
         public string Dados { get; set; }
         [NotNull]
         public bool Favorito { get; set; }
+        
+        public ModelNotas()
+        {
+            this.Id = 0;
+            this.Titulo = "";
+            this.Favorito = false;
+            this.Dados = "";
+        }
     }
 }
