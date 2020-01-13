@@ -15,7 +15,37 @@ namespace AppEsqueci.Views
         public PagePrincipal()
         {
             InitializeComponent();
-            testeDB.Text = App.DbPath;
+            Button_pageprincipal_home_Clicked(new Object(), new EventArgs());
+            
+        }
+
+        private void FecharGaveta()
+        {
+            IsPresented = false;
+        }
+
+        private void Button_pageprincipal_home_Clicked(object sender, EventArgs e)
+        {
+            Detail = new PageHome();
+            FecharGaveta();
+        }
+
+        private void Button_pageprincipal_cadastrar_Clicked(object sender, EventArgs e)
+        {
+            Detail = new PageCadastrar();
+            FecharGaveta();
+        }
+
+        private void Button_pageprincipal_listar_Clicked(object sender, EventArgs e)
+        {
+            Detail = new PageListar();
+            FecharGaveta();
+        }
+
+        private void Button_pageprincipal_sobre_Clicked(object sender, EventArgs e)
+        {
+            Detail = new PageSobre();
+            FecharGaveta();
         }
     }
 }

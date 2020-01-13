@@ -7,7 +7,12 @@
              x:Class="AppEsqueci.Views.PagePrincipal" IsPresented="True">
     <MasterDetailPage.Master>
         <ContentPage Title="Menu">
-            <Button Text="Home"/>
+            <StackLayout>
+                <Button x:Name="button_pageprincipal_home" Text="Home" Clicked="Button_pageprincipal_home_Clicked"/>
+                <Button x:Name="button_pageprincipal_cadastrar" Text="Cadastrar" Clicked="Button_pageprincipal_cadastrar_Clicked"/>
+                <Button x:Name="button_pageprincipal_listar" Text="Listar" Clicked="Button_pageprincipal_listar_Clicked"/>
+                <Button x:Name="button_pageprincipal_sobre" Text="Sobre" Clicked="Button_pageprincipal_sobre_Clicked"/>
+            </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
 
