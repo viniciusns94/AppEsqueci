@@ -107,6 +107,24 @@ namespace AppEsqueci.Services
             return lista;
         }
 
+        public List<ModelNotas> ListarFavoritos()
+        {
+            List<ModelNotas> lista = new List<ModelNotas>();
+            try
+            {
+                var resp = from p in conn.Table<ModelNotas>()
+                           where p.Favorito == true
+                           select p;
+
+                lista = resp.ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(string.Format("Erro: {0}", ex.Message));
+            }
+            return lista;
+        }
+
         public ModelNotas GetNota(int id)
         {
             ModelNotas m = new ModelNotas();

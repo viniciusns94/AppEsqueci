@@ -8,6 +8,10 @@
              Title="Listar Notas">
     <ContentPage.Content>
         <StackLayout Margin="8">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Notas favoritas:"/>
+                <Switch x:Name="switch_pagelistar_favorito" HorizontalOptions="Start" Toggled="switch_pagelistar_favorito_Toggled"/>
+            </StackLayout>
             <ListView x:Name="listview_pagelistar_listarnotas" HasUnevenRows="True" SeparatorColor="Aqua" Margin="12" ItemSelected="Listview_pagelistar_listarnotas_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
