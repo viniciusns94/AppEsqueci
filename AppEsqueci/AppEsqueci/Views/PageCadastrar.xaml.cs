@@ -67,7 +67,7 @@ namespace AppEsqueci.Views
         private void Button_pagecadastrar_cancelar_Clicked(object sender, EventArgs e)
         {
             MasterDetailPage p = (MasterDetailPage)Application.Current.MainPage;
-            p.Detail = new PageHome();
+            p.Detail = new NavigationPage(new PageHome());
         }
 
         private async void Button_pagecadastrar_excluir_Clicked(object sender, EventArgs e)

@@ -24,7 +24,7 @@
 
                 <StackLayout Orientation="Horizontal">
                     <Image Source="localizar.png"/>
-                    <Button x:Name="button_pageprincipal_listar" Text="Listar" Clicked="Button_pageprincipal_listar_Clicked"
+                    <Button x:Name="button_pageprincipal_listar" Text="Localizar" Clicked="Button_pageprincipal_listar_Clicked"
                             HorizontalOptions="FillAndExpand"/>
                 </StackLayout>
 
