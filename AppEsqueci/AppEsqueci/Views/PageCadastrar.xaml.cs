@@ -56,7 +56,7 @@ namespace AppEsqueci.Views
                     DisplayAlert("Resultado da operação: ", dbNotas.StatusMessage, "OK");
                 }
                 MasterDetailPage p = (MasterDetailPage)Application.Current.MainPage;
-                p.Detail = new PageHome();
+                p.Detail = new NavigationPage(new PageHome());
             }
             catch (Exception ex)
             {
@@ -81,7 +81,7 @@ namespace AppEsqueci.Views
                 DisplayAlert("Resultado da Operação", dbNotas.StatusMessage, "OK");
 
                 MasterDetailPage p = (MasterDetailPage)Application.Current.MainPage;
-                p.Detail = new PageHome();
+                p.Detail = new NavigationPage(new PageHome());
             }
         }
     }

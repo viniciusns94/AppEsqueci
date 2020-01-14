@@ -32,7 +32,7 @@ namespace AppEsqueci.Views
         {
             ModelNotas nota = (ModelNotas) listview_pagelistar_listarnotas.SelectedItem;
             MasterDetailPage p = (MasterDetailPage)Application.Current.MainPage;
-            p.Detail = new PageCadastrar(nota);
+            p.Detail = new NavigationPage(new PageCadastrar(nota));
         }
     }
 }
